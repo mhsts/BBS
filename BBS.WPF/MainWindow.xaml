@@ -1,0 +1,26 @@
+﻿<Window x:Class="BBS.WPF.Window1"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:BBS.WPF"
+    Title="BBS v#.# - ###" Height="1024" Width="1280" WindowState="Maximized" Name="MainWindow" Icon="/BBS;component/Resources/beer.ico" BorderBrush="Transparent" Closing="MainWindow_Closing">
+
+    <Grid>
+
+        <Image Name="image1" Stretch="Fill" Source="/BBS;component/Resources/metal_background_green.png" />
+        
+        <Rectangle Height="2" Margin="0,37,0,0" Name="rectangle1" Stroke="Black" VerticalAlignment="Top" IsHitTestVisible="False" Opacity="0.2" Grid.ColumnSpan="2" />
+        <Grid Name="subScreens" Margin="0,37,0,0">
+            <local:SelectUser x:Name="selectUser" Visibility="Visible" Margin="0,8.75,0,0"/>
+            <local:LoginUser x:Name="loginUser" Visibility="Hidden" Margin="0,-150,0,0" />
+            <local:ComposeOrder x:Name="composeOrder" Visibility="Hidden" Margin="0,8.75,0,0" />
+            <Image Margin="0,0,0,0" Name="grolschLogo" Stretch="None" Source="/BBS;component/Resources/grolsch.png" Height="161.699" VerticalAlignment="Bottom" Opacity="0.9" HorizontalAlignment="Center" Width="471.176" />
+        </Grid>     
+        <Label HorizontalAlignment="Left" Margin="5,5,0,0" Opacity="0.9" Visibility="Hidden" Name="currentUserLabel" VerticalAlignment="Top" Foreground="White" FontSize="18">|Current UserName|</Label>
+        
+        <Image Height="32" HorizontalAlignment="Right" Margin="0,3,3,0" Name="viewLog" ToolTip="Bekijk geschiedenis..." Stretch="Fill" VerticalAlignment="Top" Width="32" Visibility="Hidden" Source="/BBS;component/Resources/log.png" Opacity="0.7"/>
+        <Image Height="32" HorizontalAlignment="Right" Margin="0,3,35,0" Name="accountSettingsButton" ToolTip="Touch combinatie instellen" Stretch="Fill" VerticalAlignment="Top" Width="32" MouseUp="accountSettingsButton_MouseUp" Visibility="Hidden" Source="/BBS;component/Resources/touch_login.png" Opacity="0.8" />
+        <Image Height="32" HorizontalAlignment="Right" Margin="0,3,35,0" Name="adminButton" Stretch="Fill" ToolTip="Admin gedeelte (login vereist)" VerticalAlignment="Top" Width="32" MouseUp="adminButton_Click" Source="/BBS;component/Resources/admin.png" Opacity="0.7" />
+        <Image Height="32" HorizontalAlignment="Right" Margin="0,3,70,0" Name="cashButton" Stretch="Fill" ToolTip="Contant betalen..." VerticalAlignment="Top" Width="32" MouseUp="cashButton_MouseUp" Source="/BBS;component/Resources/cash.png" Opacity="0.7" />
+        <Image Height="32" HorizontalAlignment="Right" Margin="0,3,3,0" Name="addPerson" Stretch="Fill" ToolTip="Persoon toevoegen" VerticalAlignment="Top" Width="32" MouseUp="addPerson_MouseUp" Source="/BBS;component/Resources/add_person.png"/>
+    </Grid>
+</Window>

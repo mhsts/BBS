@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="BBS.WPF.ComposeOrder"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:local="clr-namespace:BBS.WPF" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" MinHeight="400" MinWidth="800">
+    
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid Name="leftGrid" HorizontalAlignment="Left" VerticalAlignment="Stretch" Width="750" ClipToBounds="True">
+            <Grid.Resources>                
+                <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+                    <Setter Property="FontSize" Value="16"/>
+                </Style>
+                                
+                <Style TargetType="{x:Type Label}">
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="Foreground">
+                        <Setter.Value>
+                            <SolidColorBrush Color="Black"/>
+                        </Setter.Value>
+                    </Setter>
+                    <Setter Property="Background">
+                        <Setter.Value>
+                            <LinearGradientBrush Opacity="0.5" StartPoint="0,0" EndPoint="1,2">
+                                <GradientStop Color="#356800" Offset="0"/>
+                                <GradientStop Color="Transparent" Offset="1"/>
+                            </LinearGradientBrush>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Grid.Resources>
+            
+            <WrapPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Name="productChoice"/>
+            <WrapPanel Name="amountChoice" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Visibility="Hidden">
+                <Button Style="{DynamicResource BorderlessButton}" FontSize="20" Margin="5,5,0,5" Content="&lt;&lt;&lt; Terug" Foreground="Blue" Click="AmountBackButtonClick" />
+                <WrapPanel Name="amountChoiceContainer" >
+                    <Label Name="label1" Width="690">Label</Label>
+                    <Button Height="35" Name="button1">Button</Button>
+                </WrapPanel>
+            </WrapPanel>
+        </Grid>
+        <Grid HorizontalAlignment="Right" VerticalAlignment="Bottom" Name="totalsGrid" Width="320" Height="110" Margin="0,0,0,0">
+            <Button Name="okButton" Width="130" Height="45" BorderBrush="Black" HorizontalAlignment="Right" Margin="0,6.426,6,0" VerticalAlignment="Top" Click="okButton_Click">Klaar!</Button>
+            <Button Name="cancelButton" Width="130" Height="45" Margin="0,0,6,6" VerticalAlignment="Bottom" HorizontalAlignment="Right" Click="cancelButton_Click">Annuleren</Button>
+            <Label Height="45" Margin="6.426,6.426,142.086,0" Name="totalLabel" VerticalAlignment="Top" FontSize="20" VerticalContentAlignment="Center">Totaal:</Label>
+            <Label Height="45" Margin="6.426,0,142.086,7.14" Name="balanceLabel" VerticalAlignment="Bottom" FontSize="20" VerticalContentAlignment="Center">Tegoed:</Label>
+        </Grid>
+        <local:OrderList x:Name="orderList" Width="320" VerticalAlignment="Stretch" HorizontalAlignment="Right" />        
+    </Grid>
+</UserControl>

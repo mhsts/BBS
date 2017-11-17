@@ -1,0 +1,20 @@
+﻿<Window x:Class="BBS.WPF.AddPerson"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Title="Nieuwe gebruiker..." Height="281" Width="351" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="ToolWindow" Loaded="Window_Loaded">
+    <Grid>
+        <Label Name="label1" Width="150" Height="25" HorizontalAlignment="Left" Margin="12,10,0,0" VerticalAlignment="Top">Naam</Label>
+        <Label Name="label2" Width="150" Height="25" HorizontalAlignment="Left" Margin="12,41,0,0" VerticalAlignment="Top">Wachtwoord *</Label>
+        <Label Name="label3" Width="150" Height="25" HorizontalAlignment="Left" Margin="12,72,0,0" VerticalAlignment="Top">Herhaal wachtwoord</Label>
+        <Label Name="label4" Width="150" HorizontalAlignment="Left" Margin="12,103,0,115">Scancode (pasje)</Label>
+        
+        <TextBox Width="150" Height="25" Name="nameTxt" HorizontalAlignment="Right" Margin="0,12,13,0" TabIndex="0" VerticalAlignment="Top"></TextBox>
+        <PasswordBox Width="150" Height="25" Name="passwordTxt" HorizontalAlignment="Right" Margin="0,43,13,0" VerticalAlignment="Top" TabIndex="1"></PasswordBox>
+        <PasswordBox Width="150" Height="25" Name="password2Txt" HorizontalAlignment="Right" Margin="0,74,13,0" VerticalAlignment="Top" TabIndex="2"></PasswordBox>
+        <TextBox Width="150" Height="25" Name="scancodeTxt" HorizontalAlignment="Right" Margin="0,105,13,113" TabIndex="3"></TextBox>
+        
+        <TextBlock Name="label5" VerticalAlignment="Bottom" TextWrapping="Wrap" Height="38" Canvas.Left="71" Canvas.Top="109" Width="204" HorizontalAlignment="Left" Margin="12,0,0,56">* Gebruik geen wachtwoord dat je ook voor andere zaken gebruikt.</TextBlock>      
+        <Button Name="createButton" Height="38" Width="98" HorizontalAlignment="Right" Margin="0,0,114,12" VerticalAlignment="Bottom" TabIndex="4" BorderBrush="Black" Click="createButton_Click">Aanmaken</Button>
+        <Button Name="cancelButton" Height="38" Width="96" HorizontalAlignment="Right" Margin="0,0,12,12" VerticalAlignment="Bottom" TabIndex="5" Click="cancelButton_Click" IsCancel="True">Annuleren</Button>
+    </Grid>
+</Window>

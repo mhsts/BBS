@@ -1,0 +1,8 @@
+﻿<UserControl x:Class="BBS.WPF.OrderListLine"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">    
+    <Grid MinWidth="282">
+        <Label Margin="0,0,0,0" Width="218" Name="label1" HorizontalAlignment="Left" VerticalAlignment="Stretch" FontSize="20">11x Grolsch</Label>
+        <Image Margin="0,0,32,0" Name="deleteButton" Stretch="None" HorizontalAlignment="Right" Source="/BBS;component/Resources/delete.png" />        
+    </Grid>
+</UserControl>

@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="BBS.WPF.LoginUser"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    xmlns:local="clr-namespace:BBS.WPF" KeyUp="UserControl_KeyUp">
+    <Grid Width="495" Height="600">
+        <local:TouchLogin x:Name="touchLogin" Margin="13,13,13,110"></local:TouchLogin>
+        <PasswordBox Margin="48,0,48,95" Name="passwordBox" Height="28" VerticalAlignment="Bottom" FontSize="18" Background="White" KeyUp="passwordBox_KeyUp" />
+        <Button HorizontalAlignment="Left" Margin="47.5,0,0,23.75" Name="button1" Width="145" IsDefault="False" BorderBrush="Black" Click="buttonOkClick" Height="51" VerticalAlignment="Bottom">OK</Button>
+        <Button Margin="216.25,0,47.5,23.75" Name="button2" Click="buttonCancelClick" Height="51" VerticalAlignment="Bottom">Annuleren</Button>
+    </Grid>
+</UserControl>
